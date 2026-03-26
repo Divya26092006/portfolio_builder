@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{NAME}} - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Orbitron', monospace; 
+      background: #0a0a0a;
+      color: #00ff88;
+      padding: 60px 20px;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .glow-text {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .glow-text h1 {
+      font-size: 3.5rem;
+      text-shadow: 0 0 20px #00ff88, 0 0 40px #00ff88;
+      animation: glow 2s ease-in-out infinite alternate;
+      margin-bottom: 10px;
+    }
+    @keyframes glow { from { text-shadow: 0 0 20px #00ff88, 0 0 30px #00ff88; } to { text-shadow: 0 0 30px #00ff88, 0 0 50px #00ff88; } }
+    .section {
+      background: rgba(0,255,136,0.05);
+      border: 1px solid rgba(0,255,136,0.3);
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 25px;
+      box-shadow: 0 0 30px rgba(0,255,136,0.2);
+    }
+    .section h2 {
+      color: #00ff88;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #00ff88;
+    }
+    .neon-tag {
+      display: inline-block;
+      background: rgba(0,255,136,0.2);
+      border: 1px solid #00ff88;
+      color: #00ff88;
+      padding: 8px 16px;
+      border-radius: 25px;
+      margin: 5px;
+      box-shadow: 0 0 15px rgba(0,255,136,0.4);
+    }
+    .project-box {
+      background: rgba(0,0,0,0.5);
+      border-left: 4px solid #00ff88;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="glow-text">
+      <h1>{{NAME}}</h1>
+      <p style="font-size: 1.3rem; opacity: 0.8;">{{TAGLINE}}</p>
+    </div>
+    
+    <div class="section">
+      <h2>About</h2>
+      <p style="line-height: 1.7; color: #b8b8b8;">{{ABOUT}}</p>
+    </div>
+    
+    <div class="section">
+      <h2>Skills</h2>
+      <div>{{SKILLS}}</div>
+    </div>
+    
+    <div class="section">
+      <h2>Projects</h2>
+      <div>{{PROJECTS}}</div>
+    </div>
+    
+    <div class="section">
+      <h2>Contact</h2>
+      <p style="font-size: 1.1rem;">📧 <a href="mailto:{{EMAIL}}" style="color: #00ff88;">{{EMAIL}}</a></p>
+    </div>
+  </div>
+</body>
+</html>

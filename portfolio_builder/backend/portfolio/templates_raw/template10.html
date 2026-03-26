@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{NAME}} - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Poppins', sans-serif;
+      background: #f0f9ff;
+      padding: 40px 20px;
+    }
+    .blocks {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 2fr; gap: 24px;
+    }
+    .block {
+      background: white;
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .hero-block { 
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      grid-column: 1 / -1;
+      text-align: center;
+    }
+    .hero-block h1 { font-size: 2.8rem; margin-bottom: 12px; }
+    .blue-block { border-top: 6px solid #3b82f6; }
+    .purple-block { border-top: 6px solid #8b5cf6; }
+    .green-block { border-top: 6px solid #10b981; }
+    .tag { background: #eff6ff; color: #1d4ed8; padding: 6px 12px; border-radius: 20px; margin: 4px; display: inline-block; }
+    .project { background: #f8fafc; padding: 16px; border-radius: 12px; margin-bottom: 12px; border-left: 4px solid #3b82f6; }
+  </style>
+</head>
+<body>
+  <div class="blocks">
+    <div class="block hero-block">
+      <h1>{{NAME}}</h1>
+      <p style="font-size: 1.2rem;">{{TAGLINE}}</p>
+    </div>
+    
+    <div class="block blue-block">
+      <h2 style="margin-bottom: 16px;">About</h2>
+      <p>{{ABOUT}}</p>
+    </div>
+    
+    <div class="block purple-block">
+      <h2 style="margin-bottom: 16px;">Skills</h2>
+      <div>{{SKILLS}}</div>
+    </div>
+    
+    <div class="block green-block">
+      <h2 style="margin-bottom: 16px;">Projects</h2>
+      <div>{{PROJECTS}}</div>
+    </div>
+    
+    <div class="block" style="grid-column: 1 / -1; text-align: center;">
+      <h2 style="margin-bottom: 16px;">Contact</h2>
+      <p style="font-size: 1.1rem;"><a href="mailto:{{EMAIL}}" style="color: #3b82f6;">{{EMAIL}}</a></p>
+    </div>
+  </div>
+</body>
+</html>

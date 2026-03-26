@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{NAME}} - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #050816;
+      color: #e5e5e5;
+      padding: 40px 16px;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+      color: #22d3ee;
+    }
+    header p {
+      font-size: 1rem;
+      color: #9ca3af;
+    }
+    .section {
+      margin-bottom: 32px;
+      padding: 24px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #020617, #0f172a);
+      border: 1px solid #1e293b;
+    }
+    .section h2 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      color: #f9fafb;
+    }
+    .section p {
+      line-height: 1.6;
+      font-size: 0.95rem;
+      color: #e5e7eb;
+    }
+    .badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .badge {
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #0f172a;
+      border: 1px solid #1f2937;
+      font-size: 0.85rem;
+      color: #e5e7eb;
+    }
+    .project {
+      padding: 10px 12px;
+      margin-bottom: 8px;
+      border-radius: 8px;
+      background: #020617;
+      border: 1px solid #1f2937;
+      font-size: 0.9rem;
+    }
+    .contact {
+      font-size: 0.95rem;
+    }
+    .contact a {
+      color: #22d3ee;
+      text-decoration: none;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .section { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>{{NAME}}</h1>
+      <p>{{TAGLINE}}</p>
+    </header>
+
+    <section class="section">
+      <h2>About</h2>
+      <p>{{ABOUT}}</p>
+    </section>
+
+    <section class="section">
+      <h2>Skills</h2>
+      <div class="badge-list">
+        {{SKILLS}}
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Projects</h2>
+      <div>
+        {{PROJECTS}}
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Contact</h2>
+      <p class="contact">
+        Email: <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>
+      </p>
+    </section>
+  </div>
+</body>
+</html>

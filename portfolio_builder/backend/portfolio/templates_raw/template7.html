@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{NAME}} - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Helvetica Neue', Arial, sans-serif; 
+      background: #f8fafc;
+      color: #1e293b;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1000px; margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    .header {
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      color: white;
+      padding: 40px 30px;
+      text-align: center;
+    }
+    .header h1 { font-size: 2.5rem; margin-bottom: 8px; }
+    .content { padding: 40px 30px; }
+    .section { margin-bottom: 32px; }
+    .section h2 { color: #1e293b; margin-bottom: 16px; font-size: 1.3rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
+    .skill-tag { display: inline-block; background: #eff6ff; color: #1d4ed8; padding: 6px 12px; border-radius: 20px; margin: 4px 4px 4px 0; }
+    .project-item { padding: 16px; background: #f8fafc; border-left: 4px solid #3b82f6; margin-bottom: 12px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>{{NAME}}</h1>
+      <p style="font-size: 1.2rem; opacity: 0.95;">{{TAGLINE}}</p>
+    </header>
+    <div class="content">
+      <div class="section">
+        <h2>About</h2>
+        <p>{{ABOUT}}</p>
+      </div>
+      <div class="section">
+        <h2>Skills</h2>
+        <div>{{SKILLS}}</div>
+      </div>
+      <div class="section">
+        <h2>Projects</h2>
+        <div>{{PROJECTS}}</div>
+      </div>
+      <div class="section">
+        <h2>Contact</h2>
+        <p style="font-size: 1.1rem;"><a href="mailto:{{EMAIL}}" style="color: #3b82f6;">{{EMAIL}}</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

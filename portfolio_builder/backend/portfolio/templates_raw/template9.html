@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{NAME}} - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Inter', sans-serif;
+      background: #0f0f23;
+      color: #e2e8f0;
+      padding: 40px 20px;
+    }
+    .cards-container {
+      max-width: 1000px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 24px;
+    }
+    .card {
+      background: #1e1e2e;
+      border-radius: 16px;
+      padding: 28px;
+      border: 1px solid #2a2a3e;
+    }
+    .hero-card h1 { font-size: 2.2rem; color: #60a5fa; margin-bottom: 8px; }
+    .skill-card .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .tag { background: #3b82f6; color: white; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+    .project-card .project { background: #2a2a3e; padding: 16px; border-radius: 10px; margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+  <div class="cards-container">
+    <div class="card hero-card">
+      <h1>{{NAME}}</h1>
+      <p style="color: #94a3b8;">{{TAGLINE}}</p>
+    </div>
+    
+    <div class="card">
+      <h2 style="color: #94a3b8; margin-bottom: 16px;">About</h2>
+      <p>{{ABOUT}}</p>
+    </div>
+    
+    <div class="card skill-card">
+      <h2 style="color: #94a3b8; margin-bottom: 16px;">Skills</h2>
+      <div class="tags">{{SKILLS}}</div>
+    </div>
+    
+    <div class="card project-card">
+      <h2 style="color: #94a3b8; margin-bottom: 16px;">Projects</h2>
+      <div>{{PROJECTS}}</div>
+    </div>
+    
+    <div class="card" style="text-align: center;">
+      <h2 style="color: #94a3b8; margin-bottom: 16px;">Contact</h2>
+      <p style="font-size: 1.1rem;"><a href="mailto:{{EMAIL}}" style="color: #60a5fa;">{{EMAIL}}</a></p>
+    </div>
+  </div>
+</body>
+</html>
